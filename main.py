@@ -1,18 +1,9 @@
-
-
-
-
-
- # TEE PELI TÄHÄN
 import pygame
 from random import randrange, randint
  
-
 PUNAINEN   = (255, 0, 0)
 VIHREA = (70,166,147)
 VIOLETTI = (111, 44, 145)
-
-
 
 class Pelaaja(pygame.sprite.Sprite): #pelaaja eli robotti
     def __init__(self, leveys, korkeus):
@@ -100,8 +91,6 @@ class Vihollinen(pygame.sprite.Sprite): # luo vihollisen eli mörön ja sen rand
         self.pseudo_rect.x = self.x
         self.pseudo_rect.y = self.y
 
-
-
 class Raha(pygame.sprite.Sprite):
     def __init__(self, leveys, korkeus):
         self.leveys = leveys
@@ -135,7 +124,6 @@ class Raha(pygame.sprite.Sprite):
     
     def piirra(self, naytto):
         naytto.blit(self.image, (self.x,self.y))
-
 
 class RahaSade:
     def __init__(self):        
@@ -242,7 +230,6 @@ class RahaSade:
                     
             pygame.display.update()
             self.FramePerSec.tick(self.FPS)
-
 
 if __name__ == "__main__":
     RahaSade()
